@@ -1,31 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+  <head>
     <title>Reservas</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Reservas de Salas</h2>
     <ul>
-        <li th:each="reserva : ${reservas}">
-            Sala: <span th:text="${reserva.sala.nome}"></span> -
-            Usuário: <span th:text="${reserva.usuario.nome}"></span> -
-            Data: <span th:text="${reserva.dataHora}"></span>
-        </li>
+      <li th:each="reserva : ${reservas}">
+        Sala: <span th:text="${reserva.sala.nome}"></span> - Usuário:
+        <span th:text="${reserva.usuario.nome}"></span> - Data:
+        <span th:text="${reserva.dataHora}"></span>
+      </li>
     </ul>
 
     <form action="/reservas/salvar" method="post">
-        <select name="salaId" required>
-            <option value="" disabled selected>Selecione a Sala</option>
-            <option th:each="sala : ${salas}" th:value="${sala.id}" th:text="${sala.nome}"></option>
-        </select>
+      <select name="salaId" required>
+        <option value="" disabled selected>Selecione a Sala</option>
+        <option
+          th:each="sala : ${salas}"
+          th:value="${sala.id}"
+          th:text="${sala.nome}"
+        ></option>
+      </select>
 
-        <select name="usuarioId" required>
-            <option value="" disabled selected>Selecione o Usuário</option>
-            <option th:each="usuario : ${usuarios}" th:value="${usuario.id}" th:text="${usuario.nome}"></option>
-        </select>
+      <select name="usuarioId" required>
+        <option value="" disabled selected>Selecione o Usuário</option>
+        <option
+          th:each="usuario : ${usuarios}"
+          th:value="${usuario.id}"
+          th:text="${usuario.nome}"
+        ></option>
+      </select>
 
-        <input type="datetime-local" name="dataHora" required />
-        <button type="submit">Reservar</button>
+      <input type="datetime-local" name="dataHora" required />
+      <button type="submit">Reservar</button>
     </form>
-</body>
+  </body>
 </html>

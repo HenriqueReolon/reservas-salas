@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+  <head>
     <title>Salas</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Salas Disponíveis</h2>
     <ul>
-        <li th:each="sala : ${salas}">
-            <span th:text="${sala.nome}"></span> - Capacidade: <span th:text="${sala.capacidade}"></span>
-        </li>
+      <li th:each="sala : ${salas}">
+        <span th:text="${sala.nome}"></span> - Capacidade:
+        <span th:text="${sala.capacidade}"></span>
+      </li>
     </ul>
     <form action="/salas/salvar" method="post">
-        <input type="text" name="nome" placeholder="Nome da Sala" required />
-        <input type="number" name="capacidade" placeholder="Capacidade" required />
-        <button type="submit">Salvar</button>
+      <input type="text" name="nome" placeholder="Nome da Sala" required />
+      <input
+        type="number"
+        name="capacidade"
+        placeholder="Capacidade"
+        required
+      />
+      <button type="submit">Salvar</button>
     </form>
-</body>
+  </body>
 </html>
