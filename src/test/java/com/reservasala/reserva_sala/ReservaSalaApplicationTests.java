@@ -36,12 +36,12 @@ class ReservaSalaApplicationTests {
 
 	@Test
 	void contextLoads() {
-		// Verifies that the application context loads successfully
+		// Testa se o contexto da aplicação carrega corretamente
 	}
 
 	@Test
 	void usuarioServiceBeanIsLoaded() {
-		// Verifies that the UsuarioService bean is loaded in the application context
+		// Testa se o bean UsuarioService é carregado no contexto da aplicação
 		assertThat(usuarioService).isNotNull();
 	}
 }
