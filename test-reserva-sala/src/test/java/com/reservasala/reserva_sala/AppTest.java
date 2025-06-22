@@ -1,6 +1,7 @@
 package com.reservasala.reserva_sala;
 import com.reservasala.reserva_sala.model.Usuario;
 import com.reservasala.reserva_sala.repository.UsuarioRepository;
+import com.reservasala.reserva_sala.service.UsuarioService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

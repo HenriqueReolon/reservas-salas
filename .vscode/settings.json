@@ -2,5 +2,7 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "henriquereolon",
         "projectKey": "HenriqueReolon_reservas-salas"
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
