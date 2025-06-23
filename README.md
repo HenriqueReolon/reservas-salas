@@ -46,6 +46,7 @@ O projeto possui uma cobertura de testes que abrange as principais funcionalidad
 
 - **Testes de unidade para os serviços**: `ReservaService`, `SalaService` e `UsuarioService`, garantindo que a lógica de negócio para criação, listagem e atualização de dados está funcionando corretamente.
 - **Testes de interface de usuário (UI)**: Para as telas de `Salas` e `Usuários`, que simulam a interação do usuário com o sistema, como o preenchimento e envio de formulários.
+- **Testes de desempenho**: Medindo tempo de resposta de todas as telas utilizando jmeter.
 
 ### Como executar os testes
 
