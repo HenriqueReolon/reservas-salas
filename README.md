@@ -30,15 +30,6 @@ O Docker está configurado para realizar o build automaticamente. Siga os passos
   docker-compose down && docker rmi <ID da imagem>
   ```
 
-### Passos Adicionais
-
-1. **Acesse o diretório da aplicação** para poder executar o Docker.
-2. **Se estiver usando Windows**, certifique-se de iniciar o Docker Desktop antes de executar os comandos.
-3. **Execute o comando** para iniciar os containers:
-   ```bash
-   docker-compose up -d --build
-   ```
-
 ### Acesso à Aplicação
 
 Após iniciar os containers, a interface da aplicação pode ser acessada através dos seguintes caminhos:
@@ -46,3 +37,22 @@ Após iniciar os containers, a interface da aplicação pode ser acessada atrav�
 - [http://localhost:8082/usuarios](http://localhost:8082/usuarios)
 - [http://localhost:8082/salas](http://localhost:8082/salas)
 - [http://localhost:8082/reservas](http://localhost:8082/reservas)
+
+---
+
+## Cobertura de Testes
+
+O projeto possui uma cobertura de testes que abrange as principais funcionalidades da aplicação, incluindo:
+
+- **Testes de unidade para os serviços**: `ReservaService`, `SalaService` e `UsuarioService`, garantindo que a lógica de negócio para criação, listagem e atualização de dados está funcionando corretamente.
+- **Testes de interface de usuário (UI)**: Para as telas de `Salas` e `Usuários`, que simulam a interação do usuário com o sistema, como o preenchimento e envio de formulários.
+
+### Como executar os testes
+
+Para executar a suíte de testes completa, utilize o seguinte comando do Maven na raiz do projeto:
+
+```bash
+mvn test
+```
+
+Este comando irá compilar o código, baixar as dependências necessárias e executar todos os testes de unidade e de interface. Os testes de UI utilizam o Testcontainers para criar um ambiente de banco de dados isolado, garantindo que os testes não afetem o banco de dados de desenvolvimento.
