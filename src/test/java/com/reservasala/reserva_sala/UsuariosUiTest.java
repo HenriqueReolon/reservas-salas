@@ -26,9 +26,9 @@ import java.util.List;
 public class UsuariosUiTest {
     @Container
     public static final PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>("postgres:latest")
-        .withDatabaseName("reservasdb")
-        .withUsername("admin")
-        .withPassword("admin");
+            .withDatabaseName("reservasdb")
+            .withUsername("admin")
+            .withPassword("admin");
 
     @DynamicPropertySource
     static void registerPgProperties(DynamicPropertyRegistry registry) {
